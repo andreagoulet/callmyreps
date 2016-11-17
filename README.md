@@ -39,7 +39,10 @@ The app would send customized scripts based on data pulled from the API. Here ar
 [1] - written in app, refererenced from [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#)   
 [2] - From [Sunlight Foundation](https://sunlightfoundation.com/api/) or other API
 
-Discussion Question:
+Discussion Questions:
+
 Hi, I'm Anclial and I'm pretty new to software development.  I think this is a great idea though and I really want to help however I can.  I wanted to start with a few basic questions:
+
 1) Is this the best place for collective brainstorming?  I use GitHub for my own projects, but I'm not highly skilled at using it to collaborate.  Should we make a new ReadMe file for discussion or create a Slack channel, etc?
+
 2) I assume this app is something we want folks to be able to use on their cell phones.  What language shold we start building in?  I have a little bit of experience with Swift so that would work for me, but I know a few other languages too, so I'm flexible.
