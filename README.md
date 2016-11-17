@@ -38,3 +38,11 @@ The app would send customized scripts based on data pulled from the API. Here ar
 
 [1] - written in app, refererenced from [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#)   
 [2] - From [Sunlight Foundation](https://sunlightfoundation.com/api/) or other API
+
+##How to Contribute
+
+1. Create or sign into your GitHub account
+
+2. Click on the issues button at the top of the page. 
+
+3. Filter issues based on labels. There's work for visual designers, UX/UI, copywriters, and people who are domain experts but don't write code. You do not have to know how to code to contribute. Post a comment and submit work. 
