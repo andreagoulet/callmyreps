@@ -14,3 +14,15 @@ I imagine a really simple interface that asks a series of questions:
 2. What issues do you care about? (boolean toggles with fixed categories)
 3. How many times per week do you want to call? (default to 5) 
 4. When's the best time to get reminders? (boolean toggles for morning, noon, and afternoon) 
+
+##Domain Model
+
+* Script
+* Party (Republican, Democrat, Independent, N/A) 
+* Voting Record (pulled from Sunlight API)
+* Issue (From [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#) Healthcare, Immigration, Reproductive Rights, etc.) 
+* Representative
+  * National Representative (Senator, House)
+  * State Representative (Governor, State Senate, State House)
+  * Local Representative (School Board, Special Districts, Board of Supervisor, Town/City Council, Mayor, etc.) 
+* District (geographic region within which people vote for a certain office) 
