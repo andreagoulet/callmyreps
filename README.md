@@ -17,12 +17,15 @@ I imagine a really simple interface that asks a series of questions:
 
 ##Domain Model
 
-* Script
-* Party (Republican, Democrat, Independent, N/A) 
-* Voting Record (pulled from Sunlight API)
-* Issue (From [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#) Healthcare, Immigration, Reproductive Rights, etc.) 
-* Representative
+* Script [1]
+* Party (Republican, Democrat, Independent, N/A)[2]
+* Voting Record (pro, against, neutral)[2]
+* Issue (Healthcare, Immigration, Reproductive Rights, etc.)[1] 
+* Representative [2]
   * National Representative (Senator, House)
   * State Representative (Governor, State Senate, State House)
   * Local Representative (School Board, Special Districts, Board of Supervisor, Town/City Council, Mayor, etc.) 
-* District (geographic region within which people vote for a certain office) 
+* District (geographic region within which people vote for a certain office) [2]
+
+[1] - written in app, refererenced from [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#)
+[2] - From [Sunlight Foundation](https://sunlightfoundation.com/api/) or other API
