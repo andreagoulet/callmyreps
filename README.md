@@ -27,5 +27,5 @@ I imagine a really simple interface that asks a series of questions:
   * Local Representative (School Board, Special Districts, Board of Supervisor, Town/City Council, Mayor, etc.) 
 * District (geographic region within which people vote for a certain office) [2]
 
-[1] - written in app, refererenced from [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#)
+[1] - written in app, refererenced from [calling sheet](https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true#)   
 [2] - From [Sunlight Foundation](https://sunlightfoundation.com/api/) or other API
