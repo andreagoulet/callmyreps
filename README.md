@@ -42,7 +42,8 @@ The app would send customized scripts based on data pulled from the API. Here ar
 
 ##Product Roadmap
 
-1. MVP
+**1. MVP**
+
 * Built using [React Native](https://facebook.github.io/react-native/)
 * Goal is cross-platform functionality and speed to market
 * Replicate spreadsheet content in an app in three sections
@@ -51,14 +52,14 @@ The app would send customized scripts based on data pulled from the API. Here ar
   * Tips & Strategies
 * Static content only (No login info or API)
 
-2. Build a Back End
+**2. Build a Back End**  
 Any content that has changed in the spreadsheet will need to be updated in the app. Any such content will be moved to a back-end and the app will be updated to pull that content from the back-end. 
 
-3. Create UI for Updating Content Via BackEnd
+**3. Create UI for Updating Content Via BackEnd**  
 This will allow the originator of the spreadsheet to easily modify scripts using the application. 
 
-4. Implement Sunlight API
+**4. Implement Sunlight API**  
 When a user clicks Find Reps from the Landing Scene, they will be able to add their address and get a list of their representatives. 
 
-5. Implement Reminders/Notifications
+**5. Implement Reminders/Notifications**  
 Allows users to schedule reminders from inside the app that will allow them to access a call script and person to call in under two clicks. 
