@@ -1,0 +1,27 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://db:27017/callmyreps",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "umgj7dYSwNQYc3XUVapmWLtPjWFSJhCqAPIaZiLaSMBf0scu51ivg+Qal+zedZi8zy1G1hzT+Qab5OD2DBmQhA=="
+    },
+    "local": {},
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "permissions": {
+        "scope": ["public_profile","email"]
+      }
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "permissions": {
+        "scope": ["profile"]
+      }
+    }
+  },
+  "corsWhitelist": []
+}
