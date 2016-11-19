@@ -6,4 +6,4 @@ COPY public/ public/
 COPY src/ src/
 ENV PORT '3030'
 RUN npm install
-CMD ["node", "start"]
+CMD ["npm", "start"]
