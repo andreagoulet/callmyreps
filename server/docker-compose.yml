@@ -5,6 +5,7 @@ web:
     - "3030:3030"
   volumes:
     - .:/app
+    - /app/node_modules
   links:
     - db
 db:
