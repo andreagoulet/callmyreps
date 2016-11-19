@@ -1,6 +1,6 @@
 # callmyreps
 
-It has to be easier to call my public officials. This app will send phone scripts via text or notifications about causes people care about. 
+It has to be easier to call my elected officials. This app will send phone scripts via text or notifications about causes people care about. 
 
 This project is in the super duper early stages, so I'm using this to document my thought process with the hopes that other people can help me bring it to life and improve upon it. 
 
