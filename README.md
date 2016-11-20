@@ -16,11 +16,29 @@ The app would send customized scripts based on data pulled from the API. Here ar
 
 ##How to Contribute
 
+#####I want to share my opinion 
+
+1. Join our [Slack channel] to get to know the people who are working on this project. Don't be shy. We're easy to get along with. :)
+
+2. Introduce yourself. Tell us your name, what brought you to the project and what skills you have (you don't need to know how to code to help make this project awesome.) 
+
+3. Make friends and join in the conversation. Ask questions. Share ideas. See something that inspires you? Put it in Slack for all of us to see. 
+
+#####I want to work on the app, but I don't know how to code (yet) 
+
 1. Create or sign into your GitHub account
 
 2. Click on the issues button at the top of the page. 
 
 3. Filter issues based on labels. There's work for visual designers, UX/UI, copywriters, and people who are domain experts but don't write code. You do not have to know how to code to contribute. Post a comment and submit work. 
+
+#####I want to work on the app, and I know how to code
+
+1. Create or sign into your GitHub account
+
+2. [Fork the repository](https://help.github.com/articles/fork-a-repo/) and make the changes you want. 
+
+3. When your code is ready for review, submit a [Pull Request](https://help.github.com/articles/about-pull-requests/) so the core team can review your changes. It's normal to have a healthy discussion in the comments before something gets merged in, that's how we work together to make our code the best it can be!  
 
 ##Domain Model
 
