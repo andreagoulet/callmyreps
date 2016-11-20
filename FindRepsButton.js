@@ -3,12 +3,12 @@ import { Text, TouchableHighlight } from 'react-native';
 
 import { Button } from 'react-native-material-ui';
 
-class LoadSceneButton extends Component {
+class FindRepsButton extends Component {
   render() {
     return (
-      <Button raised primary text="This is a button"/>
+      <Button raised primary text="Find My Reps"/>
     );
   }
 }
 
-export default LoadSceneButton;
+export default FindRepsButton;

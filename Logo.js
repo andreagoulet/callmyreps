@@ -6,7 +6,7 @@ class Logo extends Component {
     return (
       <Image
         source={require('./logo.png')}
-        style={{width:200, height:200, marginTop: 30, alignSelf: 'center'}}
+        style={{width:200, height:200, marginTop: 30, marginBottom:30, alignSelf: 'center'}}
       />
     );
   }
