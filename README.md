@@ -18,7 +18,7 @@ The app would send customized scripts based on data pulled from the API. Here ar
 
 #####I want to share my opinion 
 
-1. Join our [Slack channel] to get to know the people who are working on this project. Don't be shy. We're easy to get along with. :)
+1. Join our [Slack channel](https://callmyreps.herokuapp.com/) to get to know the people who are working on this project. Don't be shy. We're easy to get along with. :)
 
 2. Introduce yourself. Tell us your name, what brought you to the project and what skills you have (you don't need to know how to code to help make this project awesome.) 
 
