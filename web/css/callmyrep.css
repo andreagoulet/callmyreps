@@ -1,0 +1,8 @@
+.navbar-inverse,
+.navbar-header {
+    background-color: red;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
