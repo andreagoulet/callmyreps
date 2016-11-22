@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>Call My Reps</title>
 
     <!-- Bootstrap Core CSS -->
@@ -16,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/business-frontpage.css" rel="stylesheet">
     <link href="css/callmyrep.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +39,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 -->
-                <a class="navbar-brand" href="#">Call My Reps</a>
+                <a class="navbar-brand" href="#"><img class="img-circle img-responsive img-center img-header" src="img/callmyrep-logo.jpg" alt="Call My Rep Logo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#takeaction">Download the Call Sheet</a>
+                    </li>
+                    <li>
+                        <a href="#getinvolved">Get Involved</a>
+                    </li>
+                </ul>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -56,51 +71,59 @@
         </div>
     </nav>
 
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12" style="padding-top: 20px">
-                    <img class="img-circle img-responsive img-center" src="img/callmyrep-logo.jpg" alt="Call My Rep Logo">
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Page Content -->
     <div class="container">
-        <div class="row" id="about">
+        <div class="row">
             <div class="col-sm-12">
-                <h2>What We Do</h2>
-                <p>Call My Rep wants to accelerate your activism!</p>
+                <h2 id="about">Why Call Your Elected Officials?</h2>
+                <p>Want to have your voice heard and actually influence public policy? Forget social media. The best way to be heard is through a phone call!</p>
+
+                <h3>But Calling Is Hard...</h3>
+                <p>We get it! First, you have to figure out who represents you, what they stand for, and what you should say. That's when good intentions quickly fade away into inaction.</p>
+
+                <h3>...So We made it easy!</h3>
+                <p>You're busy. So are we. That's why we're putting together tools that will help make it easier than ever to call your elected representatives.</p>
             </div>
         </div>
         <hr>
-        <div class="row" id="takeaction">
+        <div class="row">
             <div class="col-sm-12">
-                <h2>Take Action</h2>
-                <p>Go here to download our app and get started</p>
+                <h2 id="takeaction">Download The Call Sheet</h2>
+                <p>This all started when Kara put together a spreadsheet and shared it with the world. It's a great place to start while we work on getting the app up and running.</p>
+
                 <p>
-                    <a class="btn btn-default btn-lg" href="#">Anroid &raquo;</a>
+                    <a class="btn btn-default btn-lg btn-space" href="https://docs.google.com/spreadsheets/d/174f0WBSVNSdcQ5_S6rWPGB3pNCsruyyM_ZRQ6QUhGmo/htmlview?usp=embed_facebook&sle=true">Download the Call Sheet</a>
                 </p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">iOS &raquo;</a>
-                </p>
+
+                <p>Have an idea for a script that we should add? </p>
+
+                <p>Keep scrolling! We've got loads of ways for you to help us make this even better!</p>
+
             </div>
         </div>
         <hr>
-        <div class="row" id="getinvolved">
+        <div class="row">
             <div class="col-sm-12">
-                <h2>Get Involved</h2>
-                <p>Are you a developer, writer, designer, or want to pitch in where you can?</p>
+                <h2 id="getinvolved">Get Involved</h2>
+                <p>This works because there are so many people helping. Ready to lend a hand?</p>
                 <p>
-                    <a class="btn btn-default btn-lg" href="#">Github</a>
+                    <a class="btn btn-default btn-lg" href="http://eepurl.com/cpMpvr">Sign Up For Updates</a>
+                </p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="https://callmyreps.herokuapp.com/">Join Us On Slack</a>
+                </p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScrynDh4ScRXp2dLjMuJ8rPjPK7vpmJc0qkSb0pQ49ndQ6yVg/viewform">Take The Survey</a>
+                </p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="https://github.com/andreagoulet/callmyreps">Contribute On GitHub</a>
                 </p>
             </div>
         </div>
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Call My Rep 2016</p>
+                    <p>Copyright &copy; Andrea Goulet, MIT Licensed 2016</p>
                 </div>
             </div>
         </footer>

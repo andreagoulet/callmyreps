@@ -28,6 +28,12 @@ body {
 
 .img-center {
     margin: 0 auto;
+    align-self: center;
+}
+
+.img-header {
+    max-width: 94px;
+    max-height: 94px;
 }
 
 footer {
