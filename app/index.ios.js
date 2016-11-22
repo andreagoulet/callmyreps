@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Landing from './Landing.js';
+import Landing from './js/Landing.js';
 
 
 import { COLOR, ThemeProvider } from 'react-native-material-ui';
