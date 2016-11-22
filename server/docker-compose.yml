@@ -1,0 +1,12 @@
+web:
+  build: .
+  command: npm start
+  ports:
+    - "3030:3030"
+  volumes:
+    - .:/app
+    - /app/node_modules
+  links:
+    - db
+db:
+  image: mongo:3.2
