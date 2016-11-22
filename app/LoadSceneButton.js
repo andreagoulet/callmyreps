@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Text, TouchableHighlight } from 'react-native';
+import { Dimensions, View, Text, TouchableHighlight } from 'react-native';
 
 import { Button } from 'react-native-material-ui';
 
-class LoadSceneButton extends Component {
-  render() {
-    return (
-      <Button raised primary text="This is a button"/>
-    );
-  }
-}
+windowWidth = Dimensions.get('window').width;
+
+const LoadSceneButton = ({ sceneId, text }) => {
+  return (
+    <View style={{ marginVertical: 8 }}>
+      <Button raised primary text={text}  />
+    </View>
+  );
+};
 
 export default LoadSceneButton;

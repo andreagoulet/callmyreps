@@ -12,14 +12,12 @@ class Landing extends Component {
     return (
       <View style={{
           flex: 1,
-          flexDirection: 'column',
-          justifyContent: 'space-around',
-          alignItems: 'center'
+          margin: 8
         }}>
         <Logo/>
-        <FindRepsButton/>
-        <CallingScriptsButton/>
-        <TipsStrategiesButton/>
+        <LoadSceneButton text='Find My Reps' />
+        <LoadSceneButton text='Calling Scripts' />
+        <LoadSceneButton text='Tips &amp; Strategies'/>
       </View>
     );
   }
