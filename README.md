@@ -14,6 +14,10 @@ The app would send customized scripts based on data pulled from the API. Here ar
 
 * Citizen would be notified with a special script if there is going to be an upcoming vote about a cause they care about. 
 
+##Useful Info for Reference
+* [User Personas](https://github.com/andreagoulet/callmyreps/issues/6)
+* [Wireframe Sketches](https://github.com/andreagoulet/callmyreps/issues/8)
+
 ##How to Contribute
 
 #####I want to share my opinion 
