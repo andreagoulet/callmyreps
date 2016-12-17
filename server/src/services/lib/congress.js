@@ -1,4 +1,4 @@
-const request = require('request');
+const baseApiRequest = require('./baseApiRequest');
 
 // retrieve congress info from Sunlight Congress API.
 // Sunlight foundation no longer maintains the project
@@ -9,11 +9,7 @@ const request = require('request');
 
 const locationEndpoint = 'https://congress.api.sunlightfoundation.com/legislators/locate';
 
-const baseRequest = request.defaults({
-    url: locationEndpoint,
-    method: 'GET',
-    json: true
-});
+const baseRequest = baseApiRequest(locationEndpoint);
 
 function findRepsByPoint(latitude, longitude, callback) {
     baseRequest.get({
