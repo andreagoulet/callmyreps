@@ -21,7 +21,7 @@
     "node": ">= 0.12.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mocha",
+    "test": "npm run jshint --silent && npm run mocha --silent",
     "jshint": "jshint src/. test/. --config",
     "start": "node src/",
     "mocha": "mocha test/ --recursive"
