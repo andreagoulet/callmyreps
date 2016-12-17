@@ -4,6 +4,10 @@
 
 To run, do `docker-compose up` and visit `http://localhost:3030/`.
 
+In development, the app will automatically reload when you change anything
+in the `src/` directory. You should only need to rebuild the docker
+container if you have `npm install`ed something.
+
 ## About
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
