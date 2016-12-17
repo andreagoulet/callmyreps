@@ -1,4 +1,5 @@
 'use strict';
+const reps = require('./reps');
 const scripts = require('./scripts');
 const authentication = require('./authentication');
 const user = require('./user');
@@ -12,4 +13,5 @@ module.exports = function() {
   app.configure(authentication);
   app.configure(user);
   app.configure(scripts);
+  app.configure(reps);
 };
