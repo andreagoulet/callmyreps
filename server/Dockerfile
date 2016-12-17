@@ -1,9 +1,20 @@
 FROM node:6.9
-WORKDIR /app
-COPY package.json package.json
-COPY config/ config/
-COPY public/ public/
-COPY src/ src/
-ENV PORT '3030'
-RUN npm install
-CMD ["npm", "start"]
+
+ENV HOME=/home/node
+ENV PORT=3030
+
+COPY package.json \
+     npm-shrinkwrap.json \
+     config \
+     public \
+     src \
+     test $HOME/callmyreps_server/
+COPY wait-for-it.sh $HOME/
+RUN chown -R node:node $HOME/* && chmod +x $HOME/wait-for-it.sh
+
+USER node
+
+WORKDIR $HOME/callmyreps_server
+RUN npm install && npm cache clean
+
+CMD [ "/home/node/wait-for-it.sh", "db:27017", "--", "node", "src/" ]

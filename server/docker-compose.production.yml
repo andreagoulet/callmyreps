@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3030:3030
+    links:
+      - db
+  db:
+    image: mongo:3.2
+

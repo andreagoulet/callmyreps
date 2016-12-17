@@ -1,12 +1,16 @@
-web:
-  build: .
-  command: npm start
-  ports:
-    - "3030:3030"
-  volumes:
-    - .:/app
-    - /app/node_modules
-  links:
-    - db
-db:
-  image: mongo:3.2
+version: '2'
+services:
+  web:
+    build: .
+    command: /home/node/wait-for-it.sh db:27017 -- node_modules/.bin/nodemon src/
+    environment:
+        NODE_ENV: development
+    ports:
+      - "3030:3030"
+    volumes:
+      - .:/home/node/callmyreps_server
+      - /home/node/callmyreps_server/node_modules
+    links:
+      - db
+  db:
+    image: mongo:3.2
