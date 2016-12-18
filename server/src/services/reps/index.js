@@ -1,40 +1,72 @@
 'use strict';
 
+const errors = require('feathers-errors');
+const _ = require('lodash');
 const hooks = require('./hooks');
+const congress = require('../lib/congress');
+const states = require('../lib/states');
 
 class Service {
   constructor(options) {
     this.options = options || {};
   }
 
+  /**
+   * Finds federal and state reps for a location.
+   * Combines data from two Sunlight APIs.
+   * 'latitude' and 'longitude' params are required.
+   */
   find(params) {
-    return Promise.resolve([]);
-  }
-
-  get(id, params) {
-    return Promise.resolve({
-      id, text: `A new message with ID: ${id}!`
-    });
-  }
-
-  create(data, params) {
-    if(Array.isArray(data)) {
-      return Promise.all(data.map(current => this.create(current)));
+    var lat, long;
+    if (!params.query.latitude || !params.query.longitude ||
+      isNaN(lat = parseFloat(params.query.latitude)) ||
+      isNaN(long = parseFloat(params.query.longitude))) {
+        throw new errors.BadRequest('Please provide a valid latitude and longitude');
     }
 
-    return Promise.resolve(data);
-  }
+    // properties of the rep to return, all others will be discarded
+    const props = ['chamber', 'first_name', 'last_name', 'gender',
+                  'party', 'phone', 'state', 'state_name', 'title',
+                  'level', 'district'];
 
-  update(id, data, params) {
-    return Promise.resolve(data);
-  }
+    return Promise.all([congress.findRepsByPoint, states.findRepsByPoint]
+      .map(function(f) {
+        return f(lat, long);
+      }))
+      .then(function(results) {
 
-  patch(id, data, params) {
-    return Promise.resolve(data);
-  }
+        // federal results
+        var reps = results[0].results.map(function(rep) {
+          var outRep = _.pick(rep, props);
+          outRep.level = outRep.level || 'federal';
+          return outRep;
+        });
 
-  remove(id, params) {
-    return Promise.resolve({ id });
+        // state results
+        reps = reps.concat(results[1].map(function(rep) {
+          var outRep = _.pick(rep, props);
+          outRep.level = outRep.level || 'state';
+          outRep.phones = rep.offices.reduce(function(p,c,i) {
+            if (c.phone) {
+              var type = c.type || "phone"+i;
+              p[type] = c.phone;
+            }
+            return p;
+          }, {});
+          return outRep;
+        }));
+
+        // standardize some things
+        reps.forEach(function(rep) {
+          if (rep.state) { rep.state = rep.state.toUpperCase(); }
+          if (['D', 'Democratic'].includes(rep.party)) { rep.party = 'D'; };
+          if (['R', 'Republican'].includes(rep.party)) { rep.party = 'R'; };
+          if (['I', 'Independent'].includes(rep.party)) { rep.party = 'I'; };
+          if (rep.district) { rep.district = rep.district.toString(); };
+        });
+
+        return reps;
+      });
   }
 }
 

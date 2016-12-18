@@ -11,21 +11,21 @@ const locationEndpoint = 'https://congress.api.sunlightfoundation.com/legislator
 
 const baseRequest = baseApiRequest(locationEndpoint);
 
-function findRepsByPoint(latitude, longitude, callback) {
-    baseRequest.get({
+function findRepsByPoint(latitude, longitude) {
+    return baseRequest.get({
         qs: {
             latitude: latitude,
             longitude: longitude
         }
-    }, callback);
+    });
 };
 
-function findRepsByZip(zip, callback) {
-    baseRequest.get({
+function findRepsByZip(zip) {
+    return baseRequest.get({
         qs: {
             zip: zip
         }
-    }, callback);
+    });
 }
 
 module.exports = {

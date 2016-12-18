@@ -8,13 +8,13 @@ const locationEndpoint = 'https://openstates.org/api/v1/legislators/geo/';
 
 const baseRequest = baseApiRequest(locationEndpoint);
 
-function findRepsByPoint(latitude, longitude, callback) {
-    baseRequest.get({
+function findRepsByPoint(latitude, longitude) {
+    return baseRequest.get({
         qs: {
             lat: latitude,
             long: longitude
         }
-    }, callback);
+    });
 };
 
 module.exports = {

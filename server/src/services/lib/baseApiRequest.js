@@ -1,4 +1,4 @@
-const request = require('request');
+const request = require('request-promise');
 
 // base request used by both congress and states APIs
 
