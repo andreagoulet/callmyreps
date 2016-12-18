@@ -8,6 +8,16 @@ In development, the app will automatically reload when you change anything
 in the `src/` directory. You should only need to rebuild the docker
 container if you have `npm install`ed something.
 
+To install a new dependency:
+
+```sh
+npm install --save awesome-module
+docker-compose down
+docker-compose rm
+docker-compose build
+docker-compose up
+```
+
 ## About
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
