@@ -4,6 +4,9 @@
 
 To run, do `docker-compose up` and visit `http://localhost:3030/`.
 
+If using Docker Toolbox, use the IP address of the docker machine instead of localhost (e.g. `http://192.168.99.100:3030/`). This can
+be found by running `docker-machine ip`.
+
 In development, the app will automatically reload when you change anything
 in the `src/` directory. You should only need to rebuild the docker
 container if you have `npm install`ed something.
