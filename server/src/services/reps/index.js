@@ -6,6 +6,91 @@ const hooks = require('./hooks');
 const congress = require('../lib/congress');
 const states = require('../lib/states');
 
+const docs = {
+  description: 'Contact info for government representatives. Powered by the Sunlight API.',
+  definitions: {
+    RepContactInfo: {
+      type: 'object',
+      properties: {
+        first_name: {
+          type: 'string'
+        },
+        last_name: {
+          type: 'string'
+        },
+        party: {
+          type: 'string'
+        },
+        state: {
+          type: 'string'
+        },
+        state_name: {
+          type: 'string'
+        },
+        title: {
+          type: 'string'
+        },
+        district: {
+          type: 'string'
+        },
+        level: {
+          type: 'string',
+          enum: [ 'federal', 'state' ]
+        },
+        phones: {
+          type: 'object',
+          additionalProperties: {
+            type: 'string'
+          }
+        },
+        gender: {
+          type: 'string'
+        },
+        phone: {
+          type: 'string'
+        }
+      }
+    }
+  },
+  find: {
+    description: 'Find representatives\' contact info for a given location.',
+    parameters: [{
+      name: 'latitude',
+      type: 'number',
+      format: 'float',
+      in: 'query',
+      required: 'true',
+      description: 'Latitude of location. Example: 37.5395',
+      minimum: -90,
+      maximum: 90
+    },{
+      name: 'longitude',
+      type: 'number',
+      format: 'float',
+      in: 'query',
+      required: 'true',
+      description: 'Longitude of location. Example: -77.4773',
+      minimum: -180,
+      maxiumum: 180
+    }],
+    responses: {
+      "200": {
+        description: "a list of representatives",
+        schema: {
+          type: 'array',
+          items: {
+            "$ref": "#/definitions/RepContactInfo"
+          }
+        }
+      },
+      default: {
+        description: "Unexpected error"
+        // TODO: schema
+      }
+    }
+  }
+};
+
 class Service {
   constructor(options) {
     this.options = options || {};
@@ -74,7 +159,7 @@ module.exports = function(){
   const app = this;
 
   // Initialize our service with any options it requires
-  app.use('/reps', new Service());
+  app.use('/reps', Object.assign(new Service(), { docs }));
 
   // Get our initialize service to that we can bind hooks
   const repsService = app.service('/reps');

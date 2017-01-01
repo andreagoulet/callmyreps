@@ -11,6 +11,7 @@ const hooks = require('feathers-hooks');
 const rest = require('feathers-rest');
 const bodyParser = require('body-parser');
 const socketio = require('feathers-socketio');
+const swagger = require('feathers-swagger');
 const middleware = require('./middleware');
 const services = require('./services');
 
@@ -36,6 +37,14 @@ app.use(compress())
   .configure(hooks())
   .configure(rest())
   .configure(socketio())
+  .configure(swagger({
+    docsPath: '/docs',
+    uiIndex: path.join(__dirname, 'docs.html'),
+    info: {
+      title: 'CallMyReps API',
+      description: 'Send phone scripts to tell representatives about issues you care about'
+    }
+  }))
   .configure(services)
   .configure(middleware);
 

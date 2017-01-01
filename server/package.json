@@ -38,6 +38,7 @@
     "feathers-mongoose": "^3.6.1",
     "feathers-rest": "^1.5.2",
     "feathers-socketio": "^1.4.2",
+    "feathers-swagger": "^0.3.2",
     "lodash": "https://registry.npmjs.org/lodash/-/lodash-4.17.2.tgz",
     "mongoose": "^4.6.8",
     "passport": "^0.3.2",
